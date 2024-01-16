@@ -487,10 +487,20 @@ ul.social-network li {
     .carousel-item h5{
         background: none;
     }
+
 }
 
+@media (max-width:350px) {
+    .footer_links a{
+        font-size: 11px;
+    }
+}
 
-
+@media (min-width: 600px) and (max-width: 800px) {
+    ul.social-network li {
+        margin: 0 2px;
+    }
+}
 
 /* callout section css  */
 .about_para1{
@@ -509,13 +519,60 @@ ul.social-network li {
     position: absolute;
     top: 39%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     color: white; /* Set the text color */
     font-size: 28px;
     font-weight: bold; /* Adjust the font size as needed */
     /* Add any additional styling for the text */
   }
-
-
   
 /* callout section css  */
+
+
+
+@keyframes floatAnimation {
+    0% { transform: translate(-50%, -60%); }
+    50% { transform: translate(-50%, -40%); }
+    100% { transform: translate(-50%, -60%);}   
+  }
+
+  .callout_container .callout-text {
+    animation: floatAnimation 3s infinite;
+  }
+
+  .callout_container img{
+    animation: floatAnimationImg 3s infinite;
+
+  }
+
+  @keyframes floatAnimationImg {
+    0% { transform: translateY (0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0);}   
+  }
+
+
+.contact-img-container:hover{
+
+    animation: floatContact 2s infinite;
+
+  }
+
+  @keyframes floatContact {
+    0% { transform: translateY (0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(-20px);}   
+  }
+
+
+  .contact-img-container{
+    animation: floatContact2 2s;
+
+  }
+  
+  @keyframes floatContact2 {
+    0% { transform: translateY (0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(20px);}   
+  }
+
